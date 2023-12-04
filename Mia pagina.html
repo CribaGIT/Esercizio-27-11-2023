@@ -9,6 +9,7 @@
             background-color: #f0f0f0;
             color: #333;
             font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         header {
@@ -22,6 +23,8 @@
             border-radius: 50%;
             height: 150px;
             width: 150px;
+            display: block;
+            margin: 0 auto;
         }
 
         .contact-form {
@@ -53,24 +56,31 @@
             cursor: not-allowed;
         }
         
+        #Contatti,
+        #Esp,
+        #Skills,
+        #Bio {
+            margin-bottom: 1rem;
+        }
+        
+        #Contatti a {
+            color: #4caf50;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Il Mio Profilo</h1>
     </header>
-
-    <body>
-      <center>  
-        <br>
-        <img src="Persona.png" alt="Il Mio Nominativo">
-        <p>Bio: Sono uno sviluppatore full-stack con esperienza in JavaScript, Python e Java. Abito a Milano e mi appassiono molto la musica elettronica e la fotografia.</p>
-        <p>Skills: JavaScript, Python, Java, React, Django, Flask, PostgreSQL, MySQL, Git, Docker</p>
-        <p>Esperienze lavorative: Tecnoparlor, Parnatec</p>
-        <p>Contatti: <a href="https://github.com/CribaGIT">GitHub</a></p>
+    <center>
+    <br>
+    <img src="Persona.png" alt="Il Mio Nominativo">
+    <p id="Bio"><b>Bio</b>: Sono uno sviluppatore full-stack con esperienza in JavaScript, Python e Java. Abito a Milano e mi appassiono molto alla musica elettronica e alla fotografia.</p>
+    <p id="Skills"><b>Skills</b>: JavaScript, Python, Java, React, Django, Flask, PostgreSQL, MySQL, Git, Docker</p>
+    <p id="Esp"><b>Esperienze lavorative</b>: Tecnoparlor, Parnatec</p>
+    <p id="Contatti"><b>Contatti</b>: <a href="https://github.com/CribaGIT">GitHub</a></p>
     
-    </body>
-
     <section class="contact-form">
         <form id="contact-form">
             <input type="text" id="name" name="name" placeholder="Nome" required>
@@ -82,7 +92,7 @@
             <button type="submit">Invia</button>
         </form>
     </section>
-</center>
+    </center>
     <script>
         const form = document.getElementById('contact-form');
         const nameInput = document.getElementById('name');
